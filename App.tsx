@@ -3,22 +3,29 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
+import SearchBar from './components/SearchBar';
+
 
 export default function App() {
   return (
     <SafeAreaView>
+      <SearchBar query={''} searchQuery={''} />
     <View style={styles.container}>
-      <Text>Just getting started :)</Text>
-      <StatusBar style="auto" />
+      <Text>Current Weather</Text>
+      <Text>80°</Text>
     </View>
+    <StatusBar style="auto" />
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#fff',
+    backgroundColor: 'yellow',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  currentWeather: {
+    fontSize: 40,
+  }
 });
